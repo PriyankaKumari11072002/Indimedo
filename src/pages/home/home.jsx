@@ -41,7 +41,7 @@ const Home = () => {
 <SearchMedicineQuery/>
  <Banner/>
  <Banner1/>
- {/* <UploadPrescription/> */}
+ <UploadPrescription/>
 {/* <DEBOUNCINGConcept/>  */}
 
   </>
