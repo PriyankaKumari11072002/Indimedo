@@ -1,0 +1,23 @@
+.name{
+  color:red
+}
+.filled-input {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color:green
+}
+
+.filled-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.slider-container:hover{
+  background:aliceblue;
+  color:green;
+  border:1px solid black;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-radius:10px ; 
+}
