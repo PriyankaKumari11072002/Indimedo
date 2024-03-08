@@ -11,15 +11,27 @@ import UseEffect from '../../performanceOptimazation/useEffectHook'
 import UseMemothappa from '../../performanceOptimazation/UseMemothappa'
 import Banner from '../../Banner/banner'
 import Banner1 from '../../Banner/banner1'
-import SearchProducts from '../../common/searchbar'
+//import SearchProducts from '../../common/searchbar'
 import UseCallback from '../../performanceOptimazation/UseCallBackHook'
 import UseMemoRevision from '../../performanceOptimazation/UseMemoRevision'
 import UploadPrescription from '../../common/UploadPrescription'
+import SearchComponent from '../../common/searchcomponent'
+import Debouncing from '../../debouncing/debouncing'
+import SelectCity from '../../common/SelectCity'
+import PopoverCart from '../../common/PopOverCart'
+import Navigationmaincontent from '../navigation/navigationmaincontent'
+import NavigationBootstrap from '../navigation/NavigationBootstrap'
+import BasicExample from '../navigation/navbarMegamenu'
+import ContactForPrescription from '../../common/ContactForPrescription'
+
+
 
 
 const Home = () => {
+  //JUywe90EgngUfqHgxVWM_cQ1gzDmzcNUJZVKTNzPU9Z9IrE8eF-J-3KqLWnvuu5B5Xo  
   return (
   <>
+  {/* <PopoverCart/> */}
   {/* <UseMemo/>
   <DEBOUNCINGConcept/> */}
   {/* <DebouncingReal/> */}
@@ -36,12 +48,23 @@ const Home = () => {
 {/* <UseMemoRevision/> */}
 {/* <UseMemothappa/> */}
 {/* <SearchProducts/> */}
+{/* <Debouncing/> */}
+{/* <SelectCity/> */}
+
+{/* <SearchProducts/> */}
+{/* <ContactForPrescription/> */}
+{/* <ContactForPrescription/> */}
 <Header/>
 <Navigation/>
-<SearchMedicineQuery/>
- <Banner/>
+<SearchComponent/>
+<Banner/>
  <Banner1/>
- <UploadPrescription/>
+
+ {/* <NavigationBootstrap/> */}
+{/* <Navigationmaincontent/> */}
+{/* <SearchMedicineQuery/> */}
+
+ {/* <UploadPrescription/> */}
 {/* <DEBOUNCINGConcept/>  */}
 
   </>

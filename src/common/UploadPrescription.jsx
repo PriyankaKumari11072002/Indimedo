@@ -1,25 +1,53 @@
-import React from 'react'
+
+
+import React, { useState } from 'react';
+import ContactForPrescription from './ContactForPrescription';
 
 const UploadPrescription = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [uploadContinue, setuploadContinue] = useState(false);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+    setButtonDisabled(false);
+  };
+
+  const handleRemove = () => {
+    setSelectedFile(null);
+    setButtonDisabled(true);
+  };
+
   return (
-    <div>
-<div class="border p-4 upload_prescription">
-                            <form method="post" action="https://indimedo.com/prescription-upload" enctype="multipart/form-data" class="ng-pristine ng-valid">
-                                <input type="hidden" name="_token" value="VavqDyLwm0oD6Tnzlmlw8B8RW0V38khzE3LhWLL6"/>                                <div class="form-group">
-                                    <label><strong>Upload Prescription</strong></label>
-                                    <p class="mb-3"><small>Please attach a prescription to proceed</small></p>
-                                    <label for="document-dropzone">Choose file</label>
-                                    <div class="needsclick dropzone dz-clickable" id="document-dropzone"><div class="dz-default dz-message"><span>Drop files here to upload</span></div></div>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" id="continue" class="btn btn-block btn-primary" disabled="">Upload to Continue <i class="fa fa-fw fa-caret-right"></i></button>
-                                </div>
-                            </form>
-                        </div>
+    <>
+    {!uploadContinue&&(<div style={{ textAlign: 'center' }}>
+    <h1>Upload Prescription
+</h1> 
+<p>Please attach a prescription to proceed</p>
+ {selectedFile ? (
+   <div>
+     <img src={URL.createObjectURL(selectedFile)} alt="Selected" style={{ maxWidth: '100px', maxHeight: '100px' }} />
+     <button onClick={handleRemove}>Remove</button>
+   </div>
+ ) : (
+   <div>
+{/* <input type="file" id="upload" accept="image/*,.doc,.docx,.pdf"  hidden/>     */}
+     <input type="file" accept="image/*"  id="upload"onChange={handleFileChange} hidden/>
+     <label htmlFor='upload'>Drop files here to upload</label>
+   </div>
+ )}
+ <button disabled={buttonDisabled}  onClick={()=>setuploadContinue(true)}>Upload to continue</button>
+</div>)}
+ {uploadContinue&&<div><ContactForPrescription/></div>}
+</>
+
+  );
+};
+
+export default UploadPrescription;
 
 
-    </div>
-  )
-}
 
-export default UploadPrescription
+
+

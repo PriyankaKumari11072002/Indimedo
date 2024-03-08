@@ -10,7 +10,7 @@ const SearchMedicineQuery = () => {
   const handleChange = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
-        if (query.length >= 4) { 
+        if (query.length >3) { 
           navigate(`/product/search/${query}`);
          }
      

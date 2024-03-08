@@ -43,7 +43,7 @@ const [queryProductList,setqueryProductList]  = useState([])
                 }
       
     };
-  //   handleSearch()
+  //handleSearch()
  
   return (
     <div>

@@ -112,7 +112,7 @@ const Banner1 = () => {
         {currentBannerShow.length > 0 && currentBannerShow.map((img) => (
             <div className="slider-container " style={{width:"18rem"}} key={img.id}>
           <div className="text-center"  style={{padding:"70px"}} > 
-
+         
   <img src={img.banner} className="card-img-top" alt="..." width="100px"  height="200"/>
   
   </div>

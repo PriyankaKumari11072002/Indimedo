@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { memo, useContext } from 'react'
 import { Context } from '../store/contex'
 import { useNavigate } from 'react-router-dom'
+
 const Modal = () => {
     const {loginmodal,setloginModal} = useContext(Context)
     const Navigate = useNavigate()
-    console.log(loginmodal,'l')
+    
+
   return (
     <>
     {loginmodal&&(
@@ -14,7 +16,7 @@ const Modal = () => {
          launch
         </button>
       
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
 
@@ -63,4 +65,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default memo(Modal)
